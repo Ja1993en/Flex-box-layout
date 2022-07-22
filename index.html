@@ -16,78 +16,106 @@
     <div class="flex-box"> 
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>Flexbox Row</h1>
             </header>
             
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>Use these three properties to create a Flexbox row layout.</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.row {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                </code>
             </div>
         </div>
 
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>Flexbox Column</h1>
             </header>
             
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>Use this to create a Flexbox column layout.</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.column {
+                    display: flex;
+                    flex-direction: column
+                }
+                </code>
             </div>
         </div>
         
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>CSS Grid Layout</h1>
             </header>
             
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>Build a 12-column layout using CSS Grid</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.gird {
+                    display: grid;
+                    width: 100%
+                    gird-template-columns:
+                    reapeat(12,1fr);
+                </code>
             </div>
         </div>
 
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>Linear Gradients</h1>
             </header>
             
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>This will create a background linear gradient from top to bottom.</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.code-card .card-header {
+                    border-radius: 8px;
+                    transition: all 0.5s ease-in-out;
+                }
+                  .code-card:hover,
+                  .code-card:hover .card-header {
+                    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+                  }
+                </code>
             </div>
         </div>
 
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>Box Transition Glow</h1>
             </header>
             
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>Use transition and box shadows to glow on hover.</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.card-header {
+                    position: relative;
+                    margin-top: -20px;
+                  }</code>
             </div>
         </div>
         
         <div class="card">
              <header class="card-header">
-                 <h1>Header</h1>
+                 <h1>Overlay Card with Title</h1>
             </header>
             <div class="w3-container">
-                <p>Lorem ipsum...</p>
+                <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
             </div>
             <div class="w3-container">
-                <code>Lorem ipsum...</code>
+                <code>.card-header {
+                    position: relative;
+                    margin-top: -20px;
+                  }</code>
             </div>
         </div>
     </div>
