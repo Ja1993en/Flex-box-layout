@@ -1,0 +1,29 @@
+:root {
+    --light: aquamarine;
+    --dark: rgb(71, 71, 71);
+    --borders: whitesmoke;
+}
+body {
+    background-color: var(--dark);
+  }
+
+.card {
+    border-style: dashed;
+    border-color: var(--borders);
+}
+
+.card-header {
+    border-style: solid ;
+    border-radius: 15px;
+    border-color: var(--borders);
+}
+
+code {
+    border-style: solid ;
+    background-image: linear-gradient(to bottom right, var(--dark), var(--light));
+}
+
+h1 {
+    color: var(--light);
+    
+}
