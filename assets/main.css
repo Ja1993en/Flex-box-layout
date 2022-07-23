@@ -1,29 +1,63 @@
 :root {
     --light: aquamarine;
     --dark: rgb(71, 71, 71);
-    --borders: whitesmoke;
+    --border: whitesmoke;
 }
 body {
-    background-color: var(--dark);
+    background-color: rgb(71, 71, 71);
   }
 
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+.summary {
+    text-align: center;
+    color: var(--border);
+}
+
+p{
+    color: var(--light);
+}
 .card {
     border-style: dashed;
-    border-color: var(--borders);
+    border-color: var(--border)
 }
 
 .card-header {
-    border-style: solid ;
-    border-radius: 15px;
-    border-color: var(--borders);
+    border-style: solid;
+    border-color: whitesmoke;
 }
 
 code {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     border-style: solid ;
-    background-image: linear-gradient(to bottom right, var(--dark), var(--light));
+    font-size: 20px;
+    background-image: linear-gradient(to bottom right, var(--light), var(--dark));
+    min-height: 100%;
+    border-style: none;
+    color: var(--dark);
 }
 
+
+.card pre {
+    /* allow the text in the code (pre) element the wrap to the next level */
+    white-space: pre-wrap;
+    /* overflow: auto; */
+    tab-size: 4;
+}
 h1 {
     color: var(--light);
-    
+    text-align: center;
+    font-size: 60px;
+}
+
+h2 {
+    color: var(--light);
+    font-size: 30px;
+
 }
