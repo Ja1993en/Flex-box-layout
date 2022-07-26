@@ -43,10 +43,13 @@ header {
 .card-column {
     flex: 1 0 100%;
     /* adds padding around each card  */
+    
      padding: 1.5rem;
+
 }
 
 .code-card {
+    /* activates Flex */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -85,13 +88,24 @@ header {
         var(--dark)
     );
     tab-size: 4;
+    
     display: flex;
+    /* align the text center */
   align-items: center;
+  border-radius: 8px;
+  /* Adds padding around the text  */
+  padding: 1.2rem 1rem;
 }
+
+
 
 .code-card:hover,
 .code-card:hover .card-header {
   box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+}
+
+.code-card .code-block {
+    flex-grow: 2;
 }
 
 footer { 
@@ -99,6 +113,7 @@ footer {
     margin-top: 5%
 }
 
+/* Makes the Html responsive one it has a screen value of 768px */
  @media screen and (min-width: 768px) {
      .card-column {
          flex: 0 0 50%;
@@ -106,6 +121,7 @@ footer {
      }
 } 
 
+/* Makes the Html responsive one it has a screen value of 992px */
 @media screen and (min-width: 992px) {
     header {
         width: 75%;
