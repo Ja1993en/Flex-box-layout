@@ -1,63 +1,118 @@
-:root {
+ :root {
     --light: aquamarine;
     --dark: rgb(71, 71, 71);
     --border: whitesmoke;
 }
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     background-color: rgb(71, 71, 71);
-  }
+    padding: 10px;
+    margin-bottom: 0.625rem;
+    font-weight: 700;
+  } 
 
-.flex-box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 30px;
-}
-.summary {
-    text-align: center;
-    color: var(--border);
-}
-
-p{
-    color: var(--light);
-}
-.card {
-    border-style: dashed;
-    border-color: var(--border)
-}
-
-.card-header {
-    border-style: solid;
-    border-color: whitesmoke;
-}
-
-code {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border-style: solid ;
-    font-size: 20px;
-    background-image: linear-gradient(to bottom right, var(--light), var(--dark));
-    min-height: 100%;
-    border-style: none;
-    color: var(--dark);
-}
-
-
-.card pre {
-    /* allow the text in the code (pre) element the wrap to the next level */
-    white-space: pre-wrap;
-    /* overflow: auto; */
-    tab-size: 4;
-}
 h1 {
-    color: var(--light);
+    font-size: 4rem;
     text-align: center;
-    font-size: 60px;
-}
-
-h2 {
     color: var(--light);
-    font-size: 30px;
-
 }
+
+.summary {
+    margin-top: 5%;
+    text-align: center;
+    color: var(--light)
+}
+header {
+    margin-bottom: 8%;
+}
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+  
+} 
+/* the Html starts in columns  */
+.card-column {
+    flex: 1 0 100%;
+    /* adds padding around each card  */
+     padding: 1.5rem;
+}
+
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    min-height: 100%;
+
+    outline: 2px dashed var(--border);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+   
+    
+}
+
+.card-body {
+    margin-bottom: 15px;
+}
+
+.code-card .card-header {
+    position: relative;
+    margin: -3rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    /* background-color: var(); */
+    color: var(--light);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--dark);
+}
+
+.code-card pre {
+    /* Make the text wrap to the next level */
+    white-space: pre-wrap;
+    overflow: auto;
+    background-image: linear-gradient(to bottom right,
+        var(--light),
+        var(--dark)
+    );
+    tab-size: 4;
+    display: flex;
+  align-items: center;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--light), 0 0 15px var(--light);
+}
+
+footer { 
+    text-align: center;
+    margin-top: 5%
+}
+
+ @media screen and (min-width: 768px) {
+     .card-column {
+         flex: 0 0 50%;
+         max-width: 50%;
+     }
+} 
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+      }
+    
+      .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+} 
